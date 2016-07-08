@@ -5,3 +5,5 @@ ADVERTISE_ADDRESS=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed '
 
 sudo docker run -d --net=reservierung swarm join --advertise $ADVERTISE_ADDRESS:2375 consul://$1:8500
 
+sudo docker pull bachelorproject/msi
+
